@@ -1,0 +1,568 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: #1b1c1e;
+}
+
+body {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* section */
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+    z-index: 1;
+    color: #fffaf1;
+    text-align: center;
+}
+
+/* navbar */
+.Nav {
+    background: #1b1c1e;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* navbar container */
+.NavbarContainer {
+    display: flex;
+    justify-content: left;
+    height: 70px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* navbar menu */
+.NavMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+/* nav items */
+.NavItem {
+    height: 70px;
+    padding: 10px;
+}
+
+/* navlinks */
+.NavLinks {
+    background: linear-gradient(to right, #ff662a, #ffa22a);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #fffaf1;
+    transition: color 0.2s ease-in-out;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1 rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* navlinks hover effect */
+.NavLinks:hover {
+    color: rgba(0, 0, 0, 0);
+    transition: all 0.5s ease;
+}
+
+/* gradient highlight link */
+.link {
+    text-decoration: none;
+    line-height: 1;
+
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 5px 5px;
+    overflow: hidden;
+    color: #fffaf1;
+    vertical-align: bottom;
+    transition: color 0.3s ease-out;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% - 2px));
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(40deg, #82ac26 0%, #4f3f84 60%);
+    transition: transform 0.25s ease-out;
+}
+
+.link:hover {
+    color: #fffaf1;
+}
+.link:hover::before {
+    transform: translateY(0);
+    transition: transform 0.25s ease-out;
+}
+
+/* navbar link animation */
+@keyframes rainbow {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+/* button */
+#button {
+    float: right;
+    align-items: right;
+    color: #fffaf1;
+    background: linear-gradient(to right, #ff662a, #ffa22a);
+    height: 40px;
+    width: 100px;
+    border-radius: 16px;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* button hover effect */
+#button:hover {
+    transform: scale(1.04);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
+}
+
+/* profile image */
+#profile {
+    background: -webkit-linear-gradient(top, #4f3f84, #82ac26);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+/* typewriter effect */
+#typewriter {
+    text-decoration: none;
+    color: #fffaf1;
+    cursor: default;
+}
+
+/* push button ~ Find out more */
+.pushbutton {
+    color: #fffaf1;
+    background: linear-gradient(to right, #4f3f84, #82ac26);
+    height: 40px;
+    width: 160px;
+    border-radius: 16px;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* push button hover */
+.pushbutton:hover {
+    transform: scale(1.04);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
+}
+
+/* wave up orientation */
+.wavesup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+/* svg image */
+.wavesup svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 320px;
+    z-index: -1;
+}
+
+/* waves shape fill */
+.wavesup .shape-fill {
+    fill: #0f0f10;
+}
+
+/* waves down orientation */
+.wavesdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* svg image */
+.wavesdown svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 320px;
+    z-index: -1;
+}
+
+/* waves shape fill */
+.wavesdown .shape-fill {
+    fill: #0f0f10;
+}
+
+/* waves colors */
+.orange {
+    background: #ff662a;
+}
+
+.yellow {
+    background: #ffa22a;
+}
+
+.green {
+    background: #82ac26;
+}
+
+.purple {
+    background: #4f3f84;
+}
+
+/* textbox */
+.textbox {
+    margin: 20px auto;
+    padding: 20px;
+    background: #3e3e3e;
+    border-radius: 14px;
+    width: 60%;
+    line-height: 1.8vmax;
+    color: #fffaf1;
+}
+
+/* Timeline Container */
+.timeline {
+    margin: 20px auto;
+    padding: 20px;
+    background: #3e3e3e;
+    font-size: 2.4vmin;
+    border-radius: 14px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+    border-left: 4px solid;
+    border-image: linear-gradient(#ffa22a, #ff662a) 20;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    background: #393433;
+    color: #fffaf1;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.6vmax;
+}
+
+/* Title of the card */
+.title {
+    color: #fffaf1;
+    position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to right, #4f3f84, #82ac26);
+    border-radius: 1000px;
+    left: -40px;
+    border: 3px solid #82ac26;
+}
+
+/* club logos */
+.Companylogo {
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.2s ease-in-out;
+}
+
+/* club logos on hover */
+.Companylogo:hover {
+    transform: scale(1.04);
+}
+
+/* main grid base for cards */
+main {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 60px 0;
+}
+
+/* cards text */
+.text--medium {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #fffaf1;
+}
+
+/* cards grid */
+.cards {
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: 40px;
+}
+
+/* card box */
+.card-box {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #3e3e3e;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-radius: 14px;
+    align-items: center;
+}
+
+/* card box on hover */
+.card-box:hover {
+    transform: translateY(-7px);
+}
+
+/* card images styles */
+.card__image-container {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* card images */
+.card__image-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* card content */
+.card__content {
+    padding: 20px;
+}
+
+/* card title */
+.card__title {
+    margin-bottom: 20px;
+}
+
+/* card info */
+.card__info {
+    display: flex;
+    align-self: end;
+    align-items: center;
+}
+
+/* media queries */
+@media only screen and (max-width: 1000px) {
+    .card {
+        grid-column-end: span 6;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        grid-gap: 20px;
+    }
+    .card {
+        grid-column-end: span 12;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+    }
+    .cards {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+    .card {
+        grid-column-end: span 6;
+    }
+}
+
+/* dropdown skills section */
+.dropdown {
+    background-color: #3e3e3e;
+    color: #fffaf1;
+    cursor: pointer;
+    padding: 18px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+/* on click dropdown */
+.active,
+.dropdown:hover {
+    background-color: #393433;
+}
+
+/* dropdown after */
+.dropdown:after {
+    content: "\002B";
+    color: #fffaf1;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+/* active after */
+.active:after {
+    content: "\2212";
+}
+
+/* dropdown panel */
+.panel {
+    padding: 0 18px;
+    background-color: #393433;
+    max-height: 0;
+    overflow: hidden;
+    width: 60%;
+    text-align: left;
+    transition: max-height 0.2s ease-in-out;
+}
+
+/* svg waves image above footer */
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* url for image */
+.layer {
+    background-image: url(./layered-waves-haikei.svg);
+}
+
+/* footer */
+.Footer {
+    background: #1b1c1e;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 1rem;
+    z-index: 10;
+    flex-direction: column;
+    padding: 14px;
+    overflow: hidden;
+}
+
+/* styling on social links */
+i {
+    display: block;
+    padding-inline: 10px;
+    padding-top: 20px;
+}
+
+/* site link */
+.Sitelink {
+    color: #fffaf1;
+    text-decoration: none;
+}
+
+/* calendly link */
+.Calendly {
+    color: #fffaf1;
+    text-decoration: none;
+}
+
+/* footer text */
+.Footertext {
+    color: #fffaf1;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+/* media queries */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .NavbarContainer {
+        margin: -2px;
+    }
+
+    .NavItem {
+        padding-left: -4px;
+        font-size: 10px;
+    }
+}
