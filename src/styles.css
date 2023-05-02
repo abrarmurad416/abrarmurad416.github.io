@@ -479,6 +479,11 @@ main {
     content: "\2212";
 }
 
+/* show panel when button is active */
+.active + .panel {
+    max-height: 500px; /* adjust to your desired height */
+}
+
 /* dropdown panel */
 .panel {
     padding: 0 18px;
