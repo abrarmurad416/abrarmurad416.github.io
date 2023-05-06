@@ -269,8 +269,13 @@ section {
     background: #3e3e3e;
     border-radius: 14px;
     width: 60%;
-    line-height: 200%;
     color: #fffaf1;
+    line-height: 1.5;
+}
+
+/* actual text inside the textbox */
+.actualtext {
+    line-height: 1.5;
 }
 
 /* Timeline Container */
