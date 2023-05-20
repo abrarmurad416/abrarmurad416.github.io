@@ -139,11 +139,12 @@ section {
 }
 
 /* button */
-#button {
+#contactbutton {
     float: right;
     align-items: right;
     color: #fffaf1;
-    background: linear-gradient(to right, #ff662a, #ffa22a);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
+
     height: 40px;
     width: 100px;
     border-radius: 16px;
@@ -156,9 +157,9 @@ section {
 }
 
 /* button hover effect */
-#button:hover {
+#contactbutton:hover {
     transform: scale(1.04);
-    background: linear-gradient(to right, #82ac26, #4f3f84);
+    background: linear-gradient(to right, #ff662a, #ffa22a);
 }
 
 /* profile image */
@@ -273,6 +274,15 @@ section {
     line-height: 1.5;
 }
 
+.textbox-title {
+    margin: 20px auto;
+    background: #3e3e3e;
+    border-radius: 14px;
+    width: 60%;
+    color: #fffaf1;
+    line-height: 1.5;
+}
+
 /* actual text inside the textbox */
 .actualtext {
     line-height: 1.5;
@@ -360,6 +370,31 @@ main {
     color: #fffaf1;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: linear-gradient(to right, #ff662a, #ffa22a);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fffaf1;
+}
+
+.button:hover {
+    transform: scale(1.04);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
+}
+
 /* cards grid */
 .cards {
     grid-column: 2 / span 12;
@@ -417,6 +452,7 @@ main {
     display: flex;
     align-self: end;
     align-items: center;
+    flex-direction: column;
 }
 
 /* media queries */
