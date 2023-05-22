@@ -143,7 +143,7 @@ section {
     float: right;
     align-items: right;
     color: #fffaf1;
-    background: linear-gradient(to right, #82ac26, #4f3f84);
+    background: linear-gradient(to right, #ff662a, #ffa22a);
 
     height: 40px;
     width: 100px;
@@ -159,7 +159,7 @@ section {
 /* button hover effect */
 #contactbutton:hover {
     transform: scale(1.04);
-    background: linear-gradient(to right, #ff662a, #ffa22a);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
 }
 
 /* profile image */
@@ -370,6 +370,7 @@ main {
     color: #fffaf1;
 }
 
+/* button container */
 .button-container {
     display: flex;
     justify-content: center;
@@ -377,10 +378,11 @@ main {
     margin-top: 10px;
 }
 
+/* live demo and code buttons */
 .button {
     padding: 10px 20px;
     margin: 5px;
-    background: linear-gradient(to right, #ff662a, #ffa22a);
+    background: linear-gradient(to right, #82ac26, #4f3f84);
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -392,7 +394,7 @@ main {
 
 .button:hover {
     transform: scale(1.04);
-    background: linear-gradient(to right, #82ac26, #4f3f84);
+    background: linear-gradient(to right, #ff662a, #ffa22a);
 }
 
 /* cards grid */
